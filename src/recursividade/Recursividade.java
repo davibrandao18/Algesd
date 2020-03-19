@@ -1,4 +1,4 @@
-package modelos;
+package recursividade;
 
 public class Recursividade {
 
