@@ -6,7 +6,7 @@ public class Exercicio3 {
 		// 3) Crie um método recursivo que procure um número dentro de um vetor, a partir de um dado índice. 
 		//    Se achar o mesmo, o método retorna o índice onde ele se encontra, senão, retorna -1. (busca linear recursiva)
 		
-		System.out.println(procN(5, 27));
+		System.out.println(procN(10, 27));
 		
 	}
 	
