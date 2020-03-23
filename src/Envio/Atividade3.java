@@ -22,6 +22,10 @@ public class Atividade3 {
 		
 		System.out.println("-> Resposta exercício 2: Soma dos ímpares = "+somaImpar(5));
 		
+		//6) Crie um procedimento recursivo que, dado um número decimal, imprima 
+		//   a representação binária correspondente.
+		
+		System.out.println("-> "+);
 	}
 	
 	public static int procN (int i, int n) {
