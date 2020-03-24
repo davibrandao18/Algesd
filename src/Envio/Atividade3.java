@@ -5,27 +5,27 @@ public class Atividade3 {
 	public static void main(String[] args) {
 		
 		
-		//---------------> Exercícios de recursividade 1
+		//---------------> Exercï¿½cios de recursividade 1
 		
 		System.out.println("Recursividade 1:\n");
 		
-		// 3) Crie um método recursivo que procure um número dentro de um vetor, a partir de um dado índice. 
-		//    Se achar o mesmo, o método retorna o índice onde ele se encontra, senão, retorna -1. (busca linear recursiva)
+		// 3) Crie um mï¿½todo recursivo que procure um nï¿½mero dentro de um vetor, a partir de um dado ï¿½ndice. 
+		//    Se achar o mesmo, o mï¿½todo retorna o ï¿½ndice onde ele se encontra, senï¿½o, retorna -1. (busca linear recursiva)
 		
-		System.out.println("-> Resposta exercício 3: Índice = "+procN(9, 99));
+		System.out.println("-> Resposta exercï¿½cio 3: ï¿½ndice = "+procN(9, 99));
 		
-		//---------------> Exercícios de recursividade 2
+		//---------------> Exercï¿½cios de recursividade 2
 		
 		System.out.println("\nRecursividade 2:\n");
 		
-		// 2) Ache recursivamente a soma dos números ímpares positivos até n.
+		// 2) Ache recursivamente a soma dos nï¿½meros ï¿½mpares positivos atï¿½ n.
 		
-		System.out.println("-> Resposta exercício 2: Soma dos ímpares = "+somaImpar(5));
+		System.out.println("-> Resposta exercï¿½cio 2: Soma dos ï¿½mpares = "+somaImpar(5));
 		
-		//6) Crie um procedimento recursivo que, dado um número decimal, imprima 
-		//   a representação binária correspondente.
+		//6) Crie um procedimento recursivo que, dado um nï¿½mero decimal, imprima 
+		//   a representaï¿½ï¿½o binï¿½ria correspondente.
 		
-		System.out.println("-> Resposta exercício 6: Representação binária de um decimal ="+repBinaria(25));
+		repBinaria(12);
 	}
 	
 	public static int procN (int i, int n) {
@@ -42,7 +42,8 @@ public class Atividade3 {
 	}
 	
 	public static int somaImpar (int n) {	
-		if (n == 0) {return 0;}
+		if (n == 0) return 0;
+		
 		if (n%2 == 0) {
 			n--;
 			return n + somaImpar(n-1);
@@ -51,12 +52,10 @@ public class Atividade3 {
 		}
 	}
 	
-	public static String repBinaria (int n) {
-		if(n/2 < 2) {
-			return "1";
-		} else if (n/2){
-			return repBinaria(;
-		} 
+	public static void repBinaria (int n) {
+		if (n > 0) {
+			repBinaria(n/2);
+			System.out.print(n%2);
+		}
 	}
-	
 }
