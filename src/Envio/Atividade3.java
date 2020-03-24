@@ -12,7 +12,7 @@ public class Atividade3 {
 		// 3) Crie um método recursivo que procure um número dentro de um vetor, a partir de um dado índice. 
 		//    Se achar o mesmo, o método retorna o índice onde ele se encontra, senão, retorna -1. (busca linear recursiva)
 		
-		System.out.println("-> Resposta exercício 3: Índice = "+procN(1, 27));
+		System.out.println("-> Resposta exercício 3: Índice = "+procN(9, 99));
 		
 		//---------------> Exercícios de recursividade 2
 		
@@ -25,13 +25,13 @@ public class Atividade3 {
 		//6) Crie um procedimento recursivo que, dado um número decimal, imprima 
 		//   a representação binária correspondente.
 		
-		System.out.println("-> "+);
+		System.out.println("-> Resposta exercício 6: Representação binária de um decimal ="+repBinaria(25));
 	}
 	
 	public static int procN (int i, int n) {
 		int vet [] = {1, 2, 5, 8, 12, 14, 16, 27, 38, 99};
 		
-		if (i > vet.length) {
+		if (i >= vet.length) {
 			return -1;
 		}
 		if (n == vet[i]) {
@@ -49,6 +49,14 @@ public class Atividade3 {
 		} else {
 			return n + somaImpar(n-1);
 		}
+	}
+	
+	public static String repBinaria (int n) {
+		if(n/2 < 2) {
+			return "1";
+		} else if (n/2){
+			return repBinaria(;
+		} 
 	}
 	
 }
