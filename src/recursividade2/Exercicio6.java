@@ -7,9 +7,10 @@ public class Exercicio6 {
 		//6) Crie um procedimento recursivo que, dado um número decimal,
 		//   imprima a representação binária correspondente.
 		
-		
 	}
 	
-	
+	/*public static void () { 
+		
+	}*/
 	
 }
