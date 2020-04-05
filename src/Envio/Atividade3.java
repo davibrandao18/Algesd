@@ -35,17 +35,10 @@ public class Atividade3 {
 		 */
 		System.out.println("-> Resposta exerc�cio 2: Soma dos �mpares = "+somaImpar(5));
 		
-<<<<<<< HEAD
 		//6) Crie um procedimento recursivo que, dado um n�mero decimal, imprima 
 		//   a representacao binaria correspondente.
-		
-=======
-		/*
-		 * 6) Crie um procedimento recursivo que, dado um número decimal,
-		 *    imprima a representação binária correspondente.
-		 */
 		System.out.print("-> Resposta exerc�cio 6: Representação binária: ");
->>>>>>> 154ca2289c8153e9c5f1e991955e08b6834e7297
+
 		repBinaria(12);
 	}
 	

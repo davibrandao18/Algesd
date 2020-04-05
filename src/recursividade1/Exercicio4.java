@@ -1,7 +1,6 @@
 package recursividade1;
 
 public class Exercicio4 {
-<<<<<<< HEAD
 	
 	public static void main(String [] args) {
 		

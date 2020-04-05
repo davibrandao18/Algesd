@@ -1,7 +1,6 @@
 package recursividade1;
 
 public class Exercicio5 {
-<<<<<<< HEAD
 	//htpp://dontpad.com/blocodenotas3
 	public int maiorVet(int vet[], int inicio) {
 		if (vet.length == 1) {;
@@ -13,7 +12,6 @@ public class Exercicio5 {
 		return inicio;
 	}
 	
-=======
 	public static int retornaMaior (int tamanhoArray, int array[]) {
 
 		if (tamanhoArray == 1) return array[0];
@@ -26,5 +24,4 @@ public class Exercicio5 {
 	      else return array[tamanhoArray-1];
 		}
 	}
->>>>>>> 154ca2289c8153e9c5f1e991955e08b6834e7297
 }
