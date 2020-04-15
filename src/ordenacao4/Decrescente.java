@@ -1,6 +1,30 @@
 package ordenacao4;
 
-public class Crescente {
+public class Decrescente {
+	
+	public static void main(String args[])
+    {
+       String saida1="\nMergeSort\n";
+       
+       for(int tam=100000; tam <= 1000000; tam=tam+100000)
+       {
+          int vet1[] = new int [tam]; 
+      
+           //Preenchendo os vetores com elementos aleatorios de 0 a 999
+          for(int i=0; i<tam; i++)
+             vet1[i] = (int) (Math.random() * 1000);
+          
+          long tempoAntes = System.currentTimeMillis();
+          mergeSortCrescente(vet1);
+          long tempoDepois = System.currentTimeMillis();
+          saida1+= "Tamanho = " + tam + "  => Tempo = " + (tempoDepois-tempoAntes) + " ms\n";
+
+
+       }
+
+       System.out.println(saida1);
+    }
+	
 	public static void mergeSortCrescente(int vet[])
     {
        int vetaux[] = new int[vet.length];
@@ -24,13 +48,13 @@ public class Crescente {
     {
        int i=inicio;
        int j=meio+1;
-       int k=inicio;
+       int k=inicio; //--> inicio vetaux
   
        while(k <= fim)   //organizando em vetaux
        {
           if(i <= meio && j <= fim)
           {
-             if(vet[i] < vet[j])
+             if(vet[i] > vet[j])
              {
                 vetaux[k] = vet[i];
                 i++; k++;
