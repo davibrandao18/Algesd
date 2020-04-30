@@ -38,7 +38,7 @@ public class Recursividade {
 	
 	 public static int mediaRa(int a) {
 		 if (a ==0)return 1;
-		 else return (1 + 2*mediaRa(a-1));
+		 else return (1 + 3*mediaRa(a-1));
 	 }
 	 
 	/**

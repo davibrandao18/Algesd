@@ -10,11 +10,12 @@ public class Desempenho {
 	 public static void main(String args[])
      {
         String saida1="\nMergeSort\n";
-        String saida2="\nQuickSort\n";
-        String saida3="\nArraysSort\n";
+        String saida2="\nMergeOtimizado\n";
+        String saida3="\nQuickSort\n";
+        String saida4="\nArraysSort\n";
         long tempoAntes, tempoDepois;
         
-        for(int tam=100000; tam <= 1000000; tam=tam+100000)
+        for(int tam=1000; tam <= 100000; tam=tam+10000)
         {
            int vet[] = new int [tam];
        
@@ -28,19 +29,23 @@ public class Desempenho {
            saida1+= "Tamanho = " + tam + "  => Tempo = " + (tempoDepois-tempoAntes) + " ms\n";
            
            tempoAntes = System.currentTimeMillis();
-           Quiksort.quickSort(vet);
+           Fodase.mergeSort(vet);
            tempoDepois = System.currentTimeMillis();
            saida2+= "Tamanho = " + tam + "  => Tempo = " + (tempoDepois-tempoAntes) + " ms\n";
            
            tempoAntes = System.currentTimeMillis();
-           Arrays.sort(vet);
+           Quiksort.quickSort(vet);
            tempoDepois = System.currentTimeMillis();
            saida3+= "Tamanho = " + tam + "  => Tempo = " + (tempoDepois-tempoAntes) + " ms\n";
-
+           
+           tempoAntes = System.currentTimeMillis();
+           Arrays.sort(vet);
+           tempoDepois = System.currentTimeMillis();
+           saida4+= "Tamanho = " + tam + "  => Tempo = " + (tempoDepois-tempoAntes) + " ms\n";
 
         }
 
-        System.out.println(saida1 +saida2 +saida3);
+        System.out.println(saida1 +saida2 +saida3 +saida4);
      }
 	
 }
