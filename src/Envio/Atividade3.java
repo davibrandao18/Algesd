@@ -4,40 +4,40 @@ public class Atividade3 {
 	
 	public static void main(String[] args) {
 
-		// Exercícios de recursividade 1
+		// Exercicios de recursividade 1
 		System.out.println("Recursividade 1:\n");
 		
 		/*
-		 * 3) Crie um método recursivo que procure um número dentro de um vetor,
-		 *    a partir de um dado índice. Se achar o mesmo, o método retorna o
-		 *    índice onde ele se encontra, senão, retorna -1. (busca linear recursiva)
+		 * 3) Crie um metodo recursivo que procure um numero dentro de um vetor,
+		 *    a partir de um dado indice. Se achar o mesmo, o metodo retorna o
+		 *    indice onde ele se encontra, senao, retorna -1. (busca linear recursiva)
 		 */
-		System.out.println("-> Resposta exerc�cio 3: �ndice = "+procN(1, 27));
+		System.out.println("-> Resposta exercicio 3: indice = "+procN(1, 27));
 		
 		/*
-		 * 4) Crie um método recursivo que implemente a busca binária recursiva.
+		 * 4) Crie um método recursivo que implemente a busca binaria recursiva.
 		 */
 		int numeros[] = {0, 1, 4, 7, 9, 15, 17};
-		System.out.println("-> Resposta exerc�cio 4: " +buscaBinaria(numeros, 17, 0, numeros.length));
+		System.out.println("-> Resposta exercicio 4: " +buscaBinaria(numeros, 17, 0, numeros.length));
 		
 		/*
-		 * 5) Crie um método recursivo que retorne o maior elemento de um vetor.
+		 * 5) Crie um metodo recursivo que retorne o maior elemento de um vetor.
 		 */
-		System.out.println("-> Resposta exerc�cio 5: " +retornaMaior(numeros.length, numeros));
+		System.out.println("-> Resposta exercicio 5: " +retornaMaior(numeros.length, numeros));
 		
 		
 		
-		// Exercícios de recursividade 2
+		// Exercicios de recursividade 2
 		System.out.println("\nRecursividade 2:\n");
 		
 		/*
-		 * 2) Ache recursivamente a soma dos números ímpares positivos até n.
+		 * 2) Ache recursivamente a soma dos numeros impares positivos ate n.
 		 */
-		System.out.println("-> Resposta exerc�cio 2: Soma dos �mpares = "+somaImpar(5));
+		System.out.println("-> Resposta exercicio 2: Soma dos impares = "+somaImpar(5));
 		
-		//6) Crie um procedimento recursivo que, dado um n�mero decimal, imprima 
+		//6) Crie um procedimento recursivo que, dado um numero decimal, imprima 
 		//   a representacao binaria correspondente.
-		System.out.print("-> Resposta exerc�cio 6: Representação binária: ");
+		System.out.print("-> Resposta exercicio 6: Representaco binaria: ");
 
 		repBinaria(12);
 	}
