@@ -14,18 +14,22 @@ class Pilha {
 	 {
 	  topo++;
 	  vet[topo] = x;
+	  System.out.println("empilhou");
 	 }
 
 	 public int desempilhar()
 	 {
 	  int aux = vet[topo];
 	  topo--;
+	  System.out.println("desempilhou");
 	  return aux;
 	 }
 
 	 public boolean vazia()
 	 {
-	  if (topo == -1) return true;
+	  if (topo == -1) {System.out.println("vazia");return true;
+	  
+	  }
 	  else return false;
 	 }
 	}
