@@ -1,5 +1,6 @@
 package listasLigadas;
 
+
 public class ListaLigadaSimples {
 
 	   public Nodo inicio, fim;
@@ -74,7 +75,7 @@ public class ListaLigadaSimples {
 	         return aux;
 	      }else{
 	         int aux = fim.dado;
-	         Nodo penultimo=inicio;
+	         Nodo penultimo = inicio;
 	         while(penultimo.link != fim)
 	         {
 	            penultimo = penultimo.link;
@@ -96,6 +97,12 @@ public class ListaLigadaSimples {
 	         else aux = aux.link;
 	      }
 	      return false;
+	   }
+	   
+	   public boolean existeRecursivo(int elemento, Nodo atual){
+		   if (atual == null) return false;
+		   if (atual.dado == elemento) return true;
+		   return existeRecursivo(elemento, atual.link);
 	   }
 	  
 	  
@@ -193,9 +200,51 @@ public class ListaLigadaSimples {
 		   }
 	   }
 	   
-	   public ListaLigadaSimples concatenar(ListaLigadaSimples lista2){
+	   public static void pilhaListaLigada() {
+		   ListaLigadaSimples lista = new ListaLigadaSimples();
+		   Pilha p = new Pilha(10);
 		   
+		   System.out.println("\npilhaListaLigada");
+		   
+		   p.empilhar(1);
+		   p.empilhar(2);
+		   p.empilhar(3);
+		   p.empilhar(4);
+		   p.empilhar(5);
+		   p.empilhar(6);
+		   p.empilhar(7);
+		   
+		   lista.adicionarInicio(p.desempilhar());
+		   lista.adicionarInicio(p.desempilhar());
+		   lista.adicionarInicio(p.desempilhar());
+		   lista.adicionarInicio(p.desempilhar());
+		   lista.adicionarInicio(p.desempilhar());
+		   lista.adicionarInicio(p.desempilhar());
+		   lista.adicionarInicio(p.desempilhar());
+
+		   System.out.println(lista.toString());
 	   }
 	   
+	   public static void filaListaLigada() {
+		   ListaLigadaSimples lista = new ListaLigadaSimples();
+		   Fila f = new Fila(10);
+		   
+		   System.out.println("\nfilaListaLigada");
+		   
+		   for(int i = 1; i <= 10; i++) {
+			   	lista.adicionarFim(i);
+				f.enfileirar(i);
+		   }
+		   
+		   for(int i = 1; i <= 10; i++) {
+			   System.out.println("Desenfileirou: "+f.desenfileirar());
+			
+		   }
+		   System.out.println(lista.toString());
+	   }
 	   
+	   public ListaLigadaSimples concatenar(ListaLigadaSimples lista){
+		   lista.fim.link = inicio;
+		   return lista;
+	   }
 }
