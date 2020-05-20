@@ -1,5 +1,8 @@
 package listaLigadaSimplesMaicon;
 
+import listaLigadaSimplesMaicon.Fila;
+import listaLigadaSimplesMaicon.Pilha;
+
 class ListaLigadaSimples
 {
    public Nodo inicio, fim;
@@ -23,7 +26,7 @@ class ListaLigadaSimples
          fim = novo;
          quantidade = 1;
       }
-      else //já existem elementos na lista
+      else //jï¿½ existem elementos na lista
       {
          Nodo novo = new Nodo();
          novo.dado = x;
@@ -44,7 +47,7 @@ class ListaLigadaSimples
          fim = novo;
          quantidade = 1;
       }
-      else //já existem elementos na lista
+      else //jï¿½ existem elementos na lista
       {
          Nodo novo = new Nodo();
          novo.dado = x;
@@ -57,7 +60,7 @@ class ListaLigadaSimples
   
    public int removerInicio()
    {
-      if(quantidade==0) throw new RuntimeException(); //lance exceção
+      if(quantidade==0) throw new RuntimeException(); //lance exceï¿½ï¿½o
       else if(quantidade==1)
       {
          int aux = inicio.dado;
@@ -77,7 +80,7 @@ class ListaLigadaSimples
   
    public int removerFim()
    {
-      if(quantidade==0) throw new RuntimeException(); //lance exceção
+      if(quantidade==0) throw new RuntimeException(); //lance exceï¿½ï¿½o
       else if(quantidade==1)
       {
          int aux = inicio.dado;
@@ -181,4 +184,58 @@ class ListaLigadaSimples
    }
    
    // TODO 3, 9 ... 11
+   
+   public static void pilhaListaLigada() {
+	   ListaLigadaSimples lista = new ListaLigadaSimples();
+	   Pilha p = new Pilha(10);
+	   
+	   System.out.println("\npilhaListaLigada");
+	   
+	   p.empilhar(1);
+	   p.empilhar(2);
+	   p.empilhar(3);
+	   p.empilhar(4);
+	   p.empilhar(5);
+	   p.empilhar(6);
+	   p.empilhar(7);
+	   
+	   lista.adicionarInicio(p.desempilhar());
+	   lista.adicionarInicio(p.desempilhar());
+	   lista.adicionarInicio(p.desempilhar());
+	   lista.adicionarInicio(p.desempilhar());
+	   lista.adicionarInicio(p.desempilhar());
+	   lista.adicionarInicio(p.desempilhar());
+	   lista.adicionarInicio(p.desempilhar());
+
+	   System.out.println(lista.toString());
+   }
+   
+   public static void filaListaLigada() {
+	   ListaLigadaSimples lista = new ListaLigadaSimples();
+	   Fila f = new Fila(10);
+	   
+	   System.out.println("\nfilaListaLigada");
+	   
+	   for(int i = 1; i <= 10; i++) {
+		   	lista.adicionarFim(i);
+			f.enfileirar(i);
+	   }
+	   
+	   System.out.println(lista.toString());
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 }
