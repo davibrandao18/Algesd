@@ -153,23 +153,15 @@ class ArvoreBinaria
 	   else return b + 1;
    }
    
-   public int menor(No raiz) {
-	   if (raiz == null) return 0;
-	   int a = menor(raiz.direita);
-	   int b = menor(raiz.esquerda);
-	   if (raiz.direita == null && raiz.esquerda == null) return raiz.chave;
-	   if (raiz.esquerda == null && raiz.direita != null) return menor(raiz.direita);
-	   if (raiz.direita == null && raiz.esquerda != null) return menor(raiz.esquerda);
-	   return a < b ? a : b;
+   public int maior(No raiz) {
+	   if (raiz == null)return 0;
+	   if (raiz.direita == null) return raiz.chave;
+	   return maior(raiz.direita);
    }
    
-   public int maior(No raiz) {
-	   if (raiz == null) return 0; //
-	   int a = maior(raiz.direita);
-	   int b = maior(raiz.esquerda);
-	   if (raiz.direita == null && raiz.esquerda == null) return raiz.chave;
-	   if (raiz.esquerda == null && raiz.direita != null) return maior(raiz.direita);
-	   if (raiz.direita == null && raiz.esquerda != null) return maior(raiz.esquerda);
-	   return a > b ? a : b;
+   public int menor(No raiz) {
+	   if (raiz == null)return 0;
+	   if (raiz.esquerda == null) return raiz.chave;
+	   return menor(raiz.esquerda);
    }
 }

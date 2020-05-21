@@ -68,10 +68,13 @@ public class TesteArvoreBinaria
       System.out.println("O antecessor de " + ab.getRaiz().chave + " eh " + ab.getRaiz().antecessor() + " e o sucessor eh " + ab.getRaiz().sucessor());
       System.out.println("\nTestando o metodo ordenarVetor:\nAntes: ");
       int vet[] = {6, 3, 8, -1, 10, 13, 7};
+      
       for(int i=0; i<vet.length; i++)
          System.out.print(vet[i] + " ");
+      
       ordenarVetor(vet);
       System.out.println("\nDepois: ");
+      
       for(int i=0; i<vet.length; i++)
          System.out.print(vet[i] + " ");
    }
