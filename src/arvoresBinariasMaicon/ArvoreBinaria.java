@@ -128,4 +128,48 @@ class ArvoreBinaria
    public String emOrdem()
    {  return emOrdem(raiz);
    }
+   
+   public int contaNos(No raiz) {
+	   if (raiz == null) return 0;
+	   else return contaNos(raiz.esquerda) +contaNos(raiz.direita) +1;
+   }
+   
+   public int somaChaves(No raiz) {
+	   if (raiz == null) return 0;
+	   else return raiz.chave + somaChaves(raiz.esquerda) + somaChaves(raiz.direita);
+   }
+   
+   public String exibirFolhas(No raiz) {
+	   if (raiz == null) return "";
+	   if (raiz.esquerda == null && raiz.direita == null) return raiz.toString();
+	   else return exibirFolhas(raiz.esquerda) + exibirFolhas(raiz.direita);
+   }
+   
+   public int alturaArvore(No raiz) {
+	   if (raiz == null) return 0;
+	   int a = alturaArvore(raiz.direita);
+	   int b = alturaArvore(raiz.esquerda);
+	   if (a > b) return a + 1;
+	   else return b + 1;
+   }
+   
+   public int menor(No raiz) {
+	   if (raiz == null) return 0;
+	   int a = menor(raiz.direita);
+	   int b = menor(raiz.esquerda);
+	   if (raiz.direita == null && raiz.esquerda == null) return raiz.chave;
+	   if (raiz.esquerda == null && raiz.direita != null) return menor(raiz.direita);
+	   if (raiz.direita == null && raiz.esquerda != null) return menor(raiz.esquerda);
+	   return a < b ? a : b;
+   }
+   
+   public int maior(No raiz) {
+	   if (raiz == null) return 0; //
+	   int a = maior(raiz.direita);
+	   int b = maior(raiz.esquerda);
+	   if (raiz.direita == null && raiz.esquerda == null) return raiz.chave;
+	   if (raiz.esquerda == null && raiz.direita != null) return maior(raiz.direita);
+	   if (raiz.direita == null && raiz.esquerda != null) return maior(raiz.esquerda);
+	   return a > b ? a : b;
+   }
 }

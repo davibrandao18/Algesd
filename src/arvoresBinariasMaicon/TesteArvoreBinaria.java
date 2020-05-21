@@ -40,7 +40,22 @@ public class TesteArvoreBinaria
       System.out.println ("Inserindo 5, 7, 3, 2, 1, 9, 8, 4, 6\n\n"
          + "A arvore em ordem sera assim: "
          + ab.emOrdem());
+      
+      
       System.out.println (ab);
+      
+      System.out.println("Esta árvore tem " +ab.contaNos(ab.getRaiz()) +" nós");
+      
+      System.out.println("Soma de todas as chaves da árvore: " +ab.somaChaves(ab.getRaiz()));
+      
+      System.out.println("Exibindo todas as folhas da árvore: " +ab.exibirFolhas(ab.getRaiz()));
+      
+      System.out.println("Altura da árvore: " +ab.alturaArvore(ab.getRaiz()));
+      
+      System.out.println("Menor da árvore: " +ab.menor(ab.getRaiz()));
+      
+      System.out.println("Maior da árvore: " +ab.maior(ab.getRaiz()));
+      
       System.out.println ("\nRemovendo o 5 ......");
       ab.remove(ab.procurar(5));
       System.out.println (ab);
