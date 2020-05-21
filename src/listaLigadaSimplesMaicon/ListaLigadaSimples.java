@@ -2,6 +2,7 @@ package listaLigadaSimplesMaicon;
 
 import listaLigadaSimplesMaicon.Fila;
 import listaLigadaSimplesMaicon.Pilha;
+import listasLigadas.Nodo;
 
 class ListaLigadaSimples
 {
@@ -183,7 +184,27 @@ class ListaLigadaSimples
 	   return iguaisRec(lista2, aux1.link, aux2.link, inicio+1);
    }
    
-   // TODO 3, 9 ... 11
+   public Nodo pontoMedio() {
+	   if(quantidade==0) return null;
+	   if(quantidade==1) return inicio;
+	   Nodo aux = inicio;
+	   
+	   for(int i = 1; i <= quantidade/2; i++)
+		   aux = aux.link;
+	   
+	   return aux;
+   }
+   
+   public void inverter() {
+	   if(quantidade <= 1) return;
+	   Nodo primeiro = inicio;
+	   for (int i=0; i<quantidade-1; i++) {
+	   Nodo seguinte = primeiro.link;
+	   primeiro.link = seguinte.link;
+	   quantidade--;
+	   adicionarInicio(seguinte.dado);
+	   }
+   }
    
    public static void pilhaListaLigada() {
 	   ListaLigadaSimples lista = new ListaLigadaSimples();
@@ -216,26 +237,12 @@ class ListaLigadaSimples
 	   
 	   System.out.println("\nfilaListaLigada");
 	   
-	   for(int i = 1; i <= 10; i++) {
-		   	lista.adicionarFim(i);
+	   for(int i = 1; i <= 10; i++)
 			f.enfileirar(i);
-	   }
+	   
+	   for(int i = 1; i <= 10; i++)
+		   lista.adicionarFim(f.desenfileirar());
 	   
 	   System.out.println(lista.toString());
-   }
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+   } 
 }

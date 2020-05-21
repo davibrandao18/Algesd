@@ -23,6 +23,7 @@ public class Main
       System.out.println("Lista � igual � Lista2?  " + lista.iguais(lista2));
       System.out.println("Lista � igual � Lista2 (rec)?  " + lista.iguaisRec(lista2, lista.inicio, lista2.inicio, 1));
       System.out.println("Removi o primeiro: " + lista.removerInicio());
+      System.out.println("Ponto m�dio da lista = " + lista.pontoMedio());
       System.out.println("Lista ap�s remo��o: " + lista);
       System.out.println("Removi o �ltimo: " + lista.removerFim());
       System.out.println("Lista ap�s remo��o: " + lista);
@@ -33,5 +34,8 @@ public class Main
       
       ListaLigadaSimples.pilhaListaLigada();
       ListaLigadaSimples.filaListaLigada();
+      
+      lista.inverter();
+      System.out.println("\nlista invertida: " + lista);
    }
 }
