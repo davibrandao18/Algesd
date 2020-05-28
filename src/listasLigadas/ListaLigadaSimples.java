@@ -1,6 +1,5 @@
 package listasLigadas;
 
-
 public class ListaLigadaSimples {
 
 	   public Nodo inicio, fim;
@@ -20,7 +19,7 @@ public class ListaLigadaSimples {
 	         inicio = novo;
 	         fim = novo;
 	         quantidade = 1;
-	      }else //já existem elementos na lista
+	      }else //jï¿½ existem elementos na lista
 	      {
 	         Nodo novo = new Nodo();
 	         novo.dado = x;
@@ -38,7 +37,7 @@ public class ListaLigadaSimples {
 	         inicio = novo;
 	         fim = novo;
 	         quantidade = 1;
-	      }else //já existem elementos na lista
+	      }else //jï¿½ existem elementos na lista
 	      {
 	         Nodo novo = new Nodo();
 	         novo.dado = x;
@@ -50,7 +49,7 @@ public class ListaLigadaSimples {
 	   }
 	  
 	   public int removerInicio(){
-	      if(quantidade==0) throw new RuntimeException(); //lance exceção
+	      if(quantidade==0) throw new RuntimeException(); //lance exceï¿½ï¿½o
 	      else if(quantidade==1){
 	         int aux = inicio.dado;
 	         inicio = null;
@@ -66,7 +65,7 @@ public class ListaLigadaSimples {
 	   }
 	  
 	   public int removerFim(){
-	      if(quantidade==0) throw new RuntimeException(); //lance exceção
+	      if(quantidade==0) throw new RuntimeException(); //lance exceï¿½ï¿½o
 	      else if(quantidade==1){
 	         int aux = inicio.dado;
 	         inicio = null;
@@ -246,5 +245,11 @@ public class ListaLigadaSimples {
 	   public ListaLigadaSimples concatenar(ListaLigadaSimples lista){
 		   lista.fim.link = inicio;
 		   return lista;
+	   }
+	   
+	   public int somaChaves(Nodo inicio) {
+		   if (inicio == null) return 0;
+		   if (inicio.link == null) return inicio.dado;
+		   else return inicio.dado + somaChaves(inicio.link);
 	   }
 }
